@@ -1,0 +1,6 @@
+stage_order,stage_name,event_name,users_reached,stage_conversion_rate,cumulative_conversion_rate,drop_off_rate,median_hours_from_prev_stage
+1,1. Signup,signup,35000,1.0,1.0,0.0,0.0
+2,2. Activation,onboarding_completed,15267,0.4362,0.4362,0.5638,0.07
+3,3. Feature Adoption,feature_used,29242,1.9154,0.8355,-0.9154,0.08
+4,4. Intent Action,intent_action,12542,0.4289,0.3583,0.5711,284.24
+5,5. Purchase,purchase,6508,0.5189,0.1859,0.4811,0.07

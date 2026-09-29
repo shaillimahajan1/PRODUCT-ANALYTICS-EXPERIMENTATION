@@ -1,0 +1,6 @@
+feature_name,users_adopted,retention_rate_with_feature,users_not_adopted,retention_rate_without_feature,retention_rate_difference,note
+csv_imported,21590,0.9548,13410,0.433,0.5218,Observational correlation only; not proven causal.
+slack_integrated,21738,0.9557,13262,0.4257,0.5299,Observational correlation only; not proven causal.
+webhook_configured,21715,0.9528,13285,0.4313,0.5215,Observational correlation only; not proven causal.
+report_exported,21686,0.9543,13314,0.4299,0.5244,Observational correlation only; not proven causal.
+custom_dashboard_created,21590,0.956,13410,0.431,0.525,Observational correlation only; not proven causal.

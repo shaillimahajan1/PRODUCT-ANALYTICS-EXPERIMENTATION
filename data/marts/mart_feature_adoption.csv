@@ -1,0 +1,6 @@
+feature_name,unique_users,event_count,adoption_rate,events_per_user,feature_share_pct
+slack_integrated,21738,80134,0.6211,3.69,20.06
+webhook_configured,21715,80522,0.6204,3.71,20.15
+report_exported,21686,79498,0.6196,3.67,19.9
+csv_imported,21590,79584,0.6169,3.69,19.92
+custom_dashboard_created,21590,79800,0.6169,3.7,19.97

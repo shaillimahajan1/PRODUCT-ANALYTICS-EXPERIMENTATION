@@ -1,0 +1,4 @@
+annual_exposed_user_volume,avg_revenue_per_conversion_usd,incremental_conversions_expected,incremental_conversions_ci_lower,incremental_conversions_ci_upper,incremental_revenue_usd_expected,incremental_revenue_usd_ci_lower,incremental_revenue_usd_ci_upper,assumption_notes,experiment_id
+50000,145.0,1580,378,2783,229100.0,54810.0,403535.0,Projected for Streamlined Interactive Onboarding Flow assuming full 100% rollout to annual user base.,EXP-2026-01
+50000,145.0,2195,538,3852,318275.0,78010.0,558540.0,Projected for Self-Serve Checkout & Pricing Transparency assuming full 100% rollout to annual user base.,EXP-2026-02
+50000,145.0,104,0,706,15080.0,0.0,102370.0,Projected for In-App Gamification Badges assuming full 100% rollout to annual user base.,EXP-2026-03

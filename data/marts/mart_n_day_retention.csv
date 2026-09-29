@@ -1,0 +1,6 @@
+day_n,cohort_size,retained_users_exact,retention_rate_exact,retained_users_rolling,retention_rate_rolling
+1,35000,3675,0.105,28242,0.8069
+3,35000,3552,0.1015,27665,0.7904
+7,35000,3454,0.0987,26420,0.7549
+14,35000,3107,0.0888,24077,0.6879
+30,35000,2592,0.0741,18260,0.5217
