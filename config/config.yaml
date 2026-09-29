@@ -1,0 +1,131 @@
+project:
+  name: "Product Analytics & Experimentation Intelligence Platform"
+  version: "1.0.0"
+  product_name: "FlowPulse"
+  product_category: "Productivity & Analytics SaaS"
+  author: "Senior Product Data Analyst & Analytics Engineer"
+  timezone: "UTC"
+  date_range:
+    start_date: "2026-01-01"
+    end_date: "2026-08-31"
+
+paths:
+  data_raw: "data/raw"
+  data_staging: "data/staging"
+  data_marts: "data/marts"
+  database: "data/product_analytics.duckdb"
+  figures: "reports/figures"
+  reports: "reports"
+  docs: "docs"
+
+data_generation:
+  seed: 42
+  num_users: 35000
+  start_date: "2026-01-01"
+  end_date: "2026-08-31"
+
+statistical_parameters:
+  alpha: 0.05
+  power: 0.80
+  confidence_level: 0.95
+  alternative: "two-sided"
+  minimum_detectable_effect: 0.02
+  srm_alpha: 0.001
+  multiple_testing_method: "fdr_bh"  # options: bonferroni, fdr_bh, holm
+
+retention:
+  default_window_days: 7
+  tracking_windows: [1, 3, 7, 14, 30, 60]
+  rolling_retention_days: 30
+  cohort_granularity: "month"
+
+funnel:
+  stages:
+    - name: "Signup"
+      event: "signup"
+      stage_order: 1
+    - name: "Activation"
+      event: "onboarding_completed"
+      stage_order: 2
+    - name: "Feature Adoption"
+      event: "feature_used"
+      stage_order: 3
+    - name: "Purchase Intent"
+      event: "intent_action"
+      stage_order: 4
+    - name: "Conversion"
+      event: "purchase"
+      stage_order: 5
+
+segmentation:
+  power_user_quantile: 0.90
+  regular_user_quantile: 0.50
+  at_risk_inactive_days: 28
+  activation_window_days: 7
+
+experiments:
+  exp_01:
+    id: "EXP-2026-01"
+    name: "Streamlined Interactive Onboarding Flow"
+    hypothesis: "Replacing modal onboarding with an interactive 3-step checklist increases 7-day user activation rate by at least 2.0% without increasing support ticket volume."
+    primary_metric: "activation_rate"
+    metric_type: "proportion"
+    secondary_metrics:
+      - "feature_adoption_rate"
+      - "day7_retention_rate"
+      - "conversion_rate"
+    guardrail_metrics:
+      - metric: "support_ticket_rate"
+        max_allowed_increase: 0.015
+      - metric: "funnel_drop_off_rate"
+        max_allowed_increase: 0.02
+    target_sample_size_per_variant: 6000
+    control_variant: "Control_Standard_Modal"
+    treatment_variant: "Treatment_Checklist"
+    start_date: "2026-03-01"
+    end_date: "2026-04-15"
+    mde: 0.020
+    status: "Completed"
+
+  exp_02:
+    id: "EXP-2026-02"
+    name: "Self-Serve Checkout & Pricing Transparency"
+    hypothesis: "Adding upfront pricing tier calculator and 1-click checkout increases checkout-to-purchase conversion rate and 30-day ARPU."
+    primary_metric: "checkout_conversion_rate"
+    metric_type: "proportion"
+    continuous_metric: "revenue_per_user"
+    secondary_metrics:
+      - "pro_plan_share"
+      - "time_to_checkout_seconds"
+    guardrail_metrics:
+      - metric: "refund_request_rate"
+        max_allowed_increase: 0.01
+    target_sample_size_per_variant: 4000
+    control_variant: "Control_MultiStep_Form"
+    treatment_variant: "Treatment_Transparent_Calculator"
+    start_date: "2026-04-01"
+    end_date: "2026-05-31"
+    mde: 0.025
+    status: "Completed"
+
+  exp_03:
+    id: "EXP-2026-03"
+    name: "In-App Gamification Badges"
+    hypothesis: "Displaying progress badges after core feature actions increases 30-day retention and DAU/MAU engagement."
+    primary_metric: "day30_retention_rate"
+    metric_type: "proportion"
+    secondary_metrics:
+      - "dau_mau_ratio"
+      - "sessions_per_user"
+    guardrail_metrics:
+      - metric: "support_ticket_rate"
+        max_allowed_increase: 0.01
+      - metric: "cancellation_intent_rate"
+        max_allowed_increase: 0.015
+    target_sample_size_per_variant: 5000
+    control_variant: "Control_No_Badges"
+    treatment_variant: "Treatment_Gamified_Badges"
+    start_date: "2026-05-01"
+    end_date: "2026-06-30"
+    mde: 0.020
+    status: "Completed"
