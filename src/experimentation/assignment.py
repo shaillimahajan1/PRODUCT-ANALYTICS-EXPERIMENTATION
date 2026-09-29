@@ -5,7 +5,7 @@ Validates against assignment leakage and duplicate exposures.
 """
 
 import hashlib
-from typing import Dict, List, Optional
+from typing import Optional
 import pandas as pd
 
 from src.utils.logging import setup_logger

@@ -4,7 +4,6 @@ Performs Chi-Square Goodness-of-Fit test to verify that observed traffic split m
 """
 
 from typing import Any, Dict, Tuple
-import numpy as np
 from scipy import stats
 
 from src.utils.logging import setup_logger

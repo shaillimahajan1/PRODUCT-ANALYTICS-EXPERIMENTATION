@@ -5,7 +5,6 @@ and segment breakdowns.
 """
 
 from typing import Dict, List, Optional
-import numpy as np
 import pandas as pd
 
 from src.utils.logging import setup_logger
@@ -46,7 +45,6 @@ def compute_funnel_metrics(
         ]
 
     stage_events = [s["event"] for s in stages]
-    stage_names = [s["name"] for s in stages]
 
     # Filter relevant events
     filtered = df_events[df_events["event_name"].isin(stage_events)].copy()

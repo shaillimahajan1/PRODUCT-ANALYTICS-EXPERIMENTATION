@@ -9,16 +9,14 @@ Unit tests for statistical inference methods:
 
 import numpy as np
 import pytest
-from scipy import stats
 
 from src.experimentation.confidence_intervals import (
     proportion_difference_ci,
     relative_lift_ci,
-    welch_mean_difference_ci,
 )
 from src.experimentation.hypothesis_tests import two_proportion_z_test, welch_t_test
 from src.experimentation.multiple_testing import correct_p_values
-from src.experimentation.power_analysis import calculate_sample_size_proportion, calculate_mde
+from src.experimentation.power_analysis import calculate_sample_size_proportion
 
 
 def test_known_z_test_equal_proportions():

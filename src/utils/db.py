@@ -3,7 +3,7 @@ DuckDB Database connection and query execution helper.
 """
 
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Optional
 import duckdb
 import pandas as pd
 

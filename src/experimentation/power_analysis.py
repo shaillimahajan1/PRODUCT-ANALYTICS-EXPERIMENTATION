@@ -4,7 +4,7 @@ Implements standard sample size sizing formulas for proportions and means,
 as well as Minimum Detectable Effect (MDE) curves.
 """
 
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List
 import numpy as np
 import pandas as pd
 from scipy import stats

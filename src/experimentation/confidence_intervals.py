@@ -4,7 +4,7 @@ Calculates rigorous uncertainty intervals for absolute lift, relative lift,
 differences in proportions, and differences in means.
 """
 
-from typing import Dict, Tuple
+from typing import Dict
 import numpy as np
 from scipy import stats
 

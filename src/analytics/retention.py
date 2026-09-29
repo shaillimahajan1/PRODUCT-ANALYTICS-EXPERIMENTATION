@@ -4,8 +4,7 @@ Implements N-Day Retention (Day 1, 3, 7, 14, 30), Rolling Retention, and Classic
 Breaks down retention by acquisition channel, device, country, and feature adoption.
 """
 
-from typing import Dict, List, Optional
-import numpy as np
+from typing import List, Optional
 import pandas as pd
 
 from src.utils.logging import setup_logger

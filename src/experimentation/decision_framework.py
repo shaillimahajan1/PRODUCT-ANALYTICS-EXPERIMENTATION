@@ -8,8 +8,7 @@ Applies rigorous multi-stage criteria to arrive at reproducible decisions:
 5. Recommendation: SHIP, ITERATE, DO NOT SHIP, or INCONCLUSIVE
 """
 
-from typing import Any, Dict, List, Optional
-import pandas as pd
+from typing import Any, Dict, List
 
 from src.utils.logging import setup_logger
 

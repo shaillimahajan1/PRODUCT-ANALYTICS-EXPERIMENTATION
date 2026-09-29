@@ -8,7 +8,6 @@ Verifies all 5 standard business scenarios:
 5. SRM Failure (Invalid Experiment)
 """
 
-import pytest
 from src.experimentation.decision_framework import evaluate_experiment_decision
 
 

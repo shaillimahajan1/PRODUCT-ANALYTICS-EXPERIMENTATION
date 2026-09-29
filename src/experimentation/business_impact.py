@@ -5,7 +5,6 @@ Incorporates point estimates and 95% confidence intervals.
 """
 
 from typing import Any, Dict
-import pandas as pd
 
 
 def estimate_business_impact(

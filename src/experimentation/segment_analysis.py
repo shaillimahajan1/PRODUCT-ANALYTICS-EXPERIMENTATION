@@ -4,10 +4,7 @@ Evaluates experiment treatment effects across pre-treatment dimensions (device, 
 Calculates sample sizes, conversion rates, lifts, confidence intervals, and p-values per segment.
 """
 
-from typing import Dict, List, Optional
-import numpy as np
 import pandas as pd
-from scipy import stats
 
 from src.experimentation.confidence_intervals import proportion_difference_ci
 from src.experimentation.hypothesis_tests import two_proportion_z_test

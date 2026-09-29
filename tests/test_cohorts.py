@@ -3,9 +3,8 @@ Unit tests for Cohort Retention matrix computation.
 """
 
 import pandas as pd
-import pytest
 
-from src.analytics.cohorts import compute_monthly_cohorts, generate_flat_cohort_marts
+from src.analytics.cohorts import compute_monthly_cohorts
 
 
 def test_cohort_retention_computation():

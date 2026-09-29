@@ -5,16 +5,9 @@ Streamlit application for exploring funnels, cohorts, and running live A/B test 
 
 from pathlib import Path
 import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import seaborn as sns
 import streamlit as st
 
-from src.experimentation.confidence_intervals import proportion_difference_ci, relative_lift_ci
-from src.experimentation.decision_framework import evaluate_experiment_decision
-from src.experimentation.hypothesis_tests import two_proportion_z_test
 from src.experimentation.power_analysis import calculate_sample_size_proportion, generate_power_curve
-from src.experimentation.sample_ratio import check_sample_ratio_mismatch
 from src.utils.config import load_config
 from src.utils.io import load_dataframe
 

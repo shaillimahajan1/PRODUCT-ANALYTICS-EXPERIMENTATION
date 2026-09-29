@@ -4,7 +4,7 @@ Calculates Daily Active Users (DAU), Weekly Active Users (WAU), Monthly Active U
 DAU/MAU stickiness ratio, sessions per user, events per session, and feature frequency.
 """
 
-from typing import Dict, Tuple
+from typing import Dict
 import numpy as np
 import pandas as pd
 

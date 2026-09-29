@@ -6,7 +6,7 @@ Generates realistic user lifecycle events, sessions, conversions, and determinis
 from datetime import datetime, timedelta
 import hashlib
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List
 import numpy as np
 import pandas as pd
 

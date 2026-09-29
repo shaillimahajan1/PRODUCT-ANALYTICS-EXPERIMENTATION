@@ -9,7 +9,7 @@ Implements:
 - Bootstrap hypothesis testing & confidence intervals
 """
 
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Dict
 import numpy as np
 from scipy import stats
 

@@ -4,8 +4,7 @@ Builds monthly signup cohorts, tracks retention periods (Month 0 through Month 6
 calculates retained user counts, retention percentages, and cohort revenue.
 """
 
-from typing import Dict, Optional, Tuple
-import numpy as np
+from typing import Optional, Tuple
 import pandas as pd
 
 from src.utils.logging import setup_logger

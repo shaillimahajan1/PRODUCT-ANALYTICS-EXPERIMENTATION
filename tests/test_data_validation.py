@@ -3,7 +3,6 @@ Unit tests for Data Quality Validation checks.
 """
 
 import pandas as pd
-import pytest
 
 from src.data.validation import DataQualityValidator
 

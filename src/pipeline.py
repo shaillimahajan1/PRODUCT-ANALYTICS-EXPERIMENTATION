@@ -7,8 +7,6 @@ statistical inference, A/B decision framework, data mart exports, and reporting.
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict
-import duckdb
-import numpy as np
 import pandas as pd
 
 from src.analytics.cohorts import compute_monthly_cohorts, generate_flat_cohort_marts
@@ -23,12 +21,9 @@ from src.experimentation.business_impact import estimate_business_impact
 from src.experimentation.confidence_intervals import (
     proportion_difference_ci,
     relative_lift_ci,
-    welch_mean_difference_ci,
 )
 from src.experimentation.decision_framework import evaluate_experiment_decision
-from src.experimentation.hypothesis_tests import two_proportion_z_test, welch_t_test
-from src.experimentation.multiple_testing import correct_p_values
-from src.experimentation.power_analysis import calculate_sample_size_proportion, calculate_mde
+from src.experimentation.hypothesis_tests import two_proportion_z_test
 from src.experimentation.sample_ratio import check_sample_ratio_mismatch
 from src.experimentation.segment_analysis import evaluate_segment_effects
 from src.utils.config import load_config

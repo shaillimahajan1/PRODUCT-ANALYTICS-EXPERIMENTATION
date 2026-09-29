@@ -8,9 +8,8 @@ Segments users mathematically using empirical quantile distributions:
 - Unactivated Users: users who never completed onboarding within 7 days of signup
 """
 
-from datetime import datetime, timedelta
-from typing import Any, Dict, Optional, Tuple
-import numpy as np
+from datetime import datetime
+from typing import Optional
 import pandas as pd
 
 from src.utils.logging import setup_logger
